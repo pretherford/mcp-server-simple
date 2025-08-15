@@ -17,10 +17,19 @@ This directory contains example configuration files for integrating the Simple M
 
 2. Copy the content from `claude_desktop_config.json` and merge it into your existing configuration file.
 
-3. Update the path in the configuration to point to your actual installation directory:
+3. **Build the project first** (required):
+   ```bash
+   cd /path/to/mcp-server-simple
+   npm install
+   npm run build
+   ```
+
+4. Update the path in the configuration to point to your actual installation directory:
    ```json
    "args": ["/absolute/path/to/mcp-server-simple/dist/index.js"]
    ```
+   
+   **Important**: Make sure the path points to `dist/index.js` (the compiled JavaScript), not `src/index.ts` (the TypeScript source).
 
 ### macOS
 
@@ -31,16 +40,34 @@ This directory contains example configuration files for integrating the Simple M
 
 2. Copy the content from `claude_desktop_config_mac.json` and merge it into your existing configuration file.
 
-3. Update the path in the configuration to point to your actual installation directory.
+3. **Build the project first** (required):
+   ```bash
+   cd /path/to/mcp-server-simple
+   npm install
+   npm run build
+   ```
+
+4. Update the path in the configuration to point to your actual installation directory.
+
+   **Important**: Make sure the path points to `dist/index.js` (the compiled JavaScript), not `src/index.ts` (the TypeScript source).
 
 ## Testing the Configuration
 
 After updating your Claude Desktop configuration:
 
-1. Restart Claude Desktop completely
-2. Start a new conversation
-3. The MCP tools should be available automatically
-4. Try using one of the tools by asking Claude to use the hello, time, or calculator tools
+1. **Ensure the project is built**: Run `npm run build` in the project directory if you haven't already
+2. Restart Claude Desktop completely
+3. Start a new conversation
+4. The MCP tools should be available automatically
+5. Try using one of the tools by asking Claude to use the hello, time, or calculator tools
+
+## Troubleshooting
+
+If you get "Cannot find module" errors:
+- Verify the path in your configuration points to `dist/index.js`, not `src/index.ts`
+- Make sure you've run `npm run build` to compile the TypeScript source
+- Check that the file exists at the specified path
+- Restart Claude Desktop after making configuration changes
 
 ## Example Usage
 
