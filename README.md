@@ -27,13 +27,15 @@ A simple Model Context Protocol (MCP) server that demonstrates basic MCP functio
    cd mcp-server-simple
    ```
 
-2. **Install dependencies:**
+2. **Quick setup (recommended):**
+   ```bash
+   ./dev-setup.sh
+   ```
+   This script will install dependencies, build the project, run tests, and provide next steps.
+
+3. **Manual setup:**
    ```bash
    npm install
-   ```
-
-3. **Build the server:**
-   ```bash
    npm run build
    ```
 
