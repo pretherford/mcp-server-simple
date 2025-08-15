@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "simple-mcp-server": {
+      "command": "node",
+      "args": ["/absolute/path/to/mcp-server-simple/dist/index.js"],
+      "env": {
+        "NODE_PATH": "/absolute/path/to/mcp-server-simple/node_modules"
+      }
+    }
+  }
+}

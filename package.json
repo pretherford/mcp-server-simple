@@ -1,0 +1,37 @@
+{
+  "name": "mcp-server-simple",
+  "version": "1.0.0",
+  "description": "A simple Model Context Protocol (MCP) server with example tools for Claude Desktop",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-desktop",
+    "ai",
+    "tools"
+  ],
+  "author": "MCP Server Simple",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
